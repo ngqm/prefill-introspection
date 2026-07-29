@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prefill-introspection"
+version = "1.0.0"
+description = "Measuring whether LLMs recognize, in a follow-up turn, that a prior response was elicited by an adversarial prefill attack."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Quang Minh Nguyen" },
+    { name = "Uzair Ahmed" },
+    { name = "Taegyoon Kim" },
+]
+keywords = ["llm", "introspection", "adversarial-prefill", "safety", "jailbreak", "interpretability"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# The paper's reproducibility appendix pins vLLM and Transformers; the remaining
+# dependencies track compatible recent releases. See requirements.txt for the
+# same list with inline notes.
+dependencies = [
+    "torch",
+    "transformers==4.57.1",
+    "vllm==0.11.0",
+    "accelerate",
+    "nnsight",
+    "nnterp",
+    "peft",
+    "trl",
+    "safetensors",
+    "datasets",
+    "sentencepiece",
+    "protobuf",
+    "scikit-learn",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "openai",
+    "httpx",
+    "requests",
+    "python-dotenv",
+    "tqdm",
+    "psutil",
+]
+
+[project.optional-dependencies]
+# Remote compute on Modal (scripts/modal/*.py, --backend modal).
+modal = ["modal", "unsloth"]
+
+[project.urls]
+Paper = "https://arxiv.org/abs/2606.23671"
+Repository = "https://github.com/ngqm/prefill-introspection"
+
+[tool.setuptools.packages.find]
+include = ["core*", "llm*", "src*", "scripts*", "experiments*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
