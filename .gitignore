@@ -1,0 +1,30 @@
+# Secrets
+.env
+
+# Outputs written by the pipeline
+rq1_runs/
+optimized_prefixes/
+activations/
+weights/
+results/
+f1_classifier/
+f2_classifier/
+taxonomy_reasons/
+annotation/
+data/*
+!data/*.csv
+!data/benign_prompts.txt
+
+# Model files and caches
+*.safetensors
+*.bin
+*.pt
+.cache/
+unsloth_compiled_cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.ipynb_checkpoints/

@@ -1,0 +1,21 @@
+# vLLM and Transformers are pinned to the versions in the paper's
+# reproducibility appendix.
+torch
+transformers==4.57.1
+vllm==0.11.0
+accelerate
+nnterp
+peft
+trl
+datasets
+sentencepiece
+protobuf
+scikit-learn
+numpy
+pandas
+matplotlib
+openai
+httpx
+python-dotenv
+tqdm
+psutil
