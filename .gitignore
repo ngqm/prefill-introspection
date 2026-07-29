@@ -1,0 +1,115 @@
+# --- Secrets and credentials ---
+.env
+.env.*
+*.key
+*.pem
+*token*
+!**/refusal_tokens.json
+**/credentials*
+**/secrets*
+
+# --- Large data and runtime artifacts ---
+activations/
+activations_ndif/
+activations_ndif_offline_test/
+rq1_runs/
+data/
+!data/benign_prompts.txt
+weights/
+logs/
+annotation/
+annotation.tar.gz
+taxonomy_reasons/
+taxonomy_reasons_v3_full/
+optimized_prefixes/
+archive/
+
+# --- Top-level scratch figures (paper figures under paper/figures stay tracked) ---
+/figures/
+
+# --- Trained classifier checkpoints ---
+f1_classifier/
+f2_classifier/
+
+# --- Hugging Face / model caches ---
+unsloth_compiled_cache/
+.cache/
+huggingface/
+**/.cache/
+**/huggingface/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.gguf
+
+# --- Modal ---
+.modal/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- LaTeX build artifacts (keep .tex, .bib, .pdf figures) ---
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+
+# LaTeX snippets emitted by the analysis scripts (paper source is not shipped)
+paper/latex/
+
+# --- Backup files ---
+*.bak
+*.bak_*
+*~
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# --- Notebook checkpoints ---
+.ipynb_checkpoints/
+
+# --- Large bulk archives ---
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+
+# Keep the env template
+!.env.example

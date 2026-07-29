@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or the paper, please cite the work below."
+title: "Can LLMs Reliably Self-Report Adversarial Prefills, and How?"
+authors:
+  - family-names: Nguyen
+    given-names: "Quang Minh"
+  - family-names: Ahmed
+    given-names: Uzair
+  - family-names: Kim
+    given-names: Taegyoon
+year: 2026
+url: "https://arxiv.org/abs/2606.23671"
+repository-code: "https://github.com/ngqm/prefill-introspection"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Can LLMs Reliably Self-Report Adversarial Prefills, and How?"
+  authors:
+    - family-names: Nguyen
+      given-names: "Quang Minh"
+    - family-names: Ahmed
+      given-names: Uzair
+    - family-names: Kim
+      given-names: Taegyoon
+  year: 2026
+  journal: "arXiv preprint arXiv:2606.23671"
+  url: "https://arxiv.org/abs/2606.23671"

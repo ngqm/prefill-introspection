@@ -1,0 +1,31 @@
+# Core inference / modeling (vllm/transformers pinned to the versions in the
+# paper's reproducibility appendix; Python >= 3.10)
+torch
+transformers==4.57.1
+vllm==0.11.0
+accelerate
+nnsight
+nnterp
+peft
+trl
+safetensors
+datasets
+sentencepiece
+protobuf
+# Judges / analysis
+scikit-learn
+numpy
+pandas
+# Plotting
+matplotlib
+seaborn
+# API clients / IO
+openai
+httpx
+requests
+python-dotenv
+tqdm
+psutil
+# Optional: remote compute on Modal (scripts/modal/*.py, --backend modal)
+# modal
+# unsloth
